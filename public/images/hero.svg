@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#211d1b" />
+      <stop offset="55%" stop-color="#110f0e" />
+      <stop offset="100%" stop-color="#050505" />
+    </linearGradient>
+    <radialGradient id="heroGlow" cx="0.72" cy="0.42" r="0.6">
+      <stop offset="0%" stop-color="#c8383d" stop-opacity="0.22" />
+      <stop offset="55%" stop-color="#b3282d" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#b3282d" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="rimGrad" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0%" stop-color="#716c67" />
+      <stop offset="45%" stop-color="#48443f" />
+      <stop offset="100%" stop-color="#201d1b" />
+    </radialGradient>
+    <radialGradient id="hubGrad" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0%" stop-color="#938d87" />
+      <stop offset="100%" stop-color="#2c2926" />
+    </radialGradient>
+    <radialGradient id="floorGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#b3282d" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#b3282d" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#heroBg)" />
+  <rect width="1600" height="900" fill="url(#heroGlow)" />
+
+  <g opacity="0.85">
+    <rect x="0" y="0" width="1600" height="1" fill="#ffffff" opacity="0.03" />
+  </g>
+
+  <g stroke="#f5f3ef" stroke-width="2" opacity="0.06">
+    <line x1="820" y1="80" x2="1180" y2="-40" transform="rotate(-14 1000 40)" />
+    <line x1="900" y1="180" x2="1400" y2="20" transform="rotate(-14 1150 100)" />
+    <line x1="980" y1="320" x2="1560" y2="130" transform="rotate(-14 1270 225)" />
+    <line x1="1050" y1="460" x2="1600" y2="300" transform="rotate(-14 1325 380)" />
+  </g>
+
+  <ellipse cx="1300" cy="810" rx="380" ry="70" fill="url(#floorGlow)" />
+
+  <g transform="translate(1300 780)">
+    <circle r="430" fill="none" stroke="#2b2825" stroke-width="34" />
+    <circle r="392" fill="none" stroke="#161413" stroke-width="3" opacity="0.7" />
+    <circle r="330" fill="url(#rimGrad)" stroke="#5c5752" stroke-width="2" />
+
+    <g stroke="#57524c" stroke-width="10" stroke-linecap="round" opacity="0.9">
+      <line x1="0" y1="0" x2="0" y2="0" transform="rotate(0)" />
+    </g>
+    <g stroke-linecap="round">
+      <g stroke="#66615b" stroke-width="9">
+        <line x1="105" y1="0" x2="300" y2="0" transform="rotate(150)" />
+        <line x1="105" y1="0" x2="300" y2="0" transform="rotate(180)" />
+        <line x1="105" y1="0" x2="300" y2="0" transform="rotate(210)" />
+        <line x1="105" y1="0" x2="300" y2="0" transform="rotate(240)" />
+        <line x1="105" y1="0" x2="300" y2="0" transform="rotate(270)" />
+      </g>
+    </g>
+
+    <path d="M -150 -60 A 60 60 0 0 1 -95 -155" fill="none" stroke="#b3282d" stroke-width="14" stroke-linecap="round" opacity="0.75" />
+
+    <circle r="108" fill="url(#hubGrad)" stroke="#6b6864" stroke-width="1.5" />
+    <circle r="6" fill="#0a0a0a" opacity="0.6" />
+
+    <path d="M -330 0 A 330 330 0 0 1 -233 -233" fill="none" stroke="#f5f3ef" stroke-width="2" opacity="0.12" />
+  </g>
+
+  <g opacity="0.4">
+    <circle cx="1432" cy="146" r="52" fill="none" stroke="#d13a3a" stroke-width="1.4" />
+    <circle cx="1432" cy="146" r="3" fill="#d13a3a" />
+  </g>
+
+  <g stroke="#f5f3ef" stroke-width="1" opacity="0.05">
+    <line x1="0" y1="760" x2="1600" y2="760" />
+  </g>
+</svg>

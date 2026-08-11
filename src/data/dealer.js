@@ -1,0 +1,55 @@
+// Centralized dealer configuration.
+// Update these values to rebrand the site without touching component code.
+export const dealer = {
+  name: "Kaze Motors",
+  shortName: "Kaze",
+  tagline: "Japanese Automotive Excellence",
+  taglineJp: "風",
+
+  phone: "0333 3723075",
+  phoneHref: "tel:+923333723075",
+  whatsapp: "923333723075",
+  email: "info@kazemotors.com",
+  location: "Karachi, Pakistan",
+
+  stats: {
+    experience: { value: 7, suffix: "+", label: "Years of Experience" },
+    deals: { value: 1500, suffix: "+", label: "Deals Closed" },
+    clients: { value: 1000, suffix: "+", label: "Happy Clients" },
+  },
+
+  social: {
+    facebook: "#",
+    instagram: "#",
+    youtube: "#",
+    tiktok: "#",
+  },
+
+  nav: [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Stories", href: "#stories" },
+    { label: "Feedback", href: "#feedback" },
+    { label: "Contact", href: "#contact" },
+  ],
+};
+
+export const testimonials = [
+  {
+    name: "Ahmed R.",
+    location: "Karachi, Pakistan",
+    quote:
+      "I had a great experience dealing with Kaze Motors. The entire process was transparent and professional. I was kept informed throughout the process and received exactly what I was promised.",
+    rating: 5,
+    initials: "AR",
+  },
+  {
+    name: "Hassan M.",
+    location: "Lahore, Pakistan",
+    quote:
+      "From selecting the right car to completing the deal, everything was handled professionally. The dealer was extremely helpful and made the entire experience smooth and stress-free.",
+    rating: 5,
+    initials: "HM",
+  },
+];
