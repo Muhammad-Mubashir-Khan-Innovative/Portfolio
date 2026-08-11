@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { dealer } from "../data/dealer";
 
-const ABOUT_IMAGE = "/images/about.svg";
+const ABOUT_IMAGE = "/images/AboutMe.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -31,7 +31,7 @@ export default function About() {
           <div className="group relative overflow-hidden rounded-sm shadow-[0_30px_60px_-20px_rgba(10,10,10,0.3)]">
             <img
               src={ABOUT_IMAGE}
-              alt="Decorative illustration of a premium alloy wheel, symbolizing precision Japanese engineering"
+              alt={`Portrait of ${dealer.name}, trusted Japanese car dealer`}
               loading="lazy"
               className="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />

@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { buildWhatsAppUrl } from "../data/whatsapp";
 
 const DEFAULT_MESSAGE =
-  "Hello Kaze Motors, I would like to enquire about a vehicle.";
+  "Hello Zayn Khan, I would like to enquire about a vehicle.";
 
 export default function WhatsAppButton() {
   return (

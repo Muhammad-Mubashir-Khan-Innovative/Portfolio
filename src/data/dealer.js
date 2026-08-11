@@ -1,15 +1,15 @@
 // Centralized dealer configuration.
 // Update these values to rebrand the site without touching component code.
 export const dealer = {
-  name: "Kaze Motors",
-  shortName: "Kaze",
+  name: "Zayn Khan",
+  shortName: "Zayn",
   tagline: "Japanese Automotive Excellence",
   taglineJp: "風",
 
   phone: "0333 3723075",
   phoneHref: "tel:+923333723075",
   whatsapp: "923333723075",
-  email: "info@kazemotors.com",
+  email: "info@zaynkhan.com",
   location: "Karachi, Pakistan",
 
   stats: {
@@ -38,18 +38,26 @@ export const dealer = {
 export const testimonials = [
   {
     name: "Ahmed R.",
-    location: "Karachi, Pakistan",
+    location: "Lagos, Nigeria",
     quote:
-      "I had a great experience dealing with Kaze Motors. The entire process was transparent and professional. I was kept informed throughout the process and received exactly what I was promised.",
+      "I had a great experience dealing with Zayn Khan. The entire process was transparent and professional. I was kept informed throughout the process and received exactly what I was promised.",
     rating: 5,
     initials: "AR",
   },
   {
     name: "Hassan M.",
-    location: "Lahore, Pakistan",
+    location: "Nairobi, Kenya",
     quote:
       "From selecting the right car to completing the deal, everything was handled professionally. The dealer was extremely helpful and made the entire experience smooth and stress-free.",
     rating: 5,
     initials: "HM",
+  },
+  {
+    name: "Grace N.",
+    location: "Accra, Ghana",
+    quote:
+      "Buying my car from Zayn Khan was such a smooth experience. He understood exactly what I needed and made sure I got a great deal. I'll definitely be recommending him to friends and family.",
+    rating: 5,
+    initials: "GN",
   },
 ];

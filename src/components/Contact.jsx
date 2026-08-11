@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import { dealer } from "../data/dealer";
 import { buildContactMessage, buildWhatsAppUrl } from "../data/whatsapp";
+import { FacebookIcon, InstagramIcon } from "./SocialIcons";
 
 const initialForm = {
   name: "",
@@ -25,13 +26,14 @@ function validate(form) {
 }
 
 const contactDetails = [
-  { icon: Phone, label: "Phone", value: dealer.phone, href: dealer.phoneHref },
   {
     icon: MessageCircle,
     label: "WhatsApp",
     value: dealer.phone,
-    href: buildWhatsAppUrl("Hello Kaze Motors, I would like to enquire about a vehicle."),
+    href: buildWhatsAppUrl("Hello Zayn Khan, I would like to enquire about a vehicle."),
   },
+  { icon: FacebookIcon, label: "Facebook", value: "@zaynkhan", href: dealer.social.facebook },
+  { icon: InstagramIcon, label: "Instagram", value: "@zaynkhan", href: dealer.social.instagram },
   { icon: Mail, label: "Email", value: dealer.email, href: `mailto:${dealer.email}` },
   { icon: MapPin, label: "Location", value: dealer.location, href: null },
 ];

@@ -6,7 +6,7 @@ export function buildWhatsAppUrl(message) {
 
 export function buildContactMessage({ name, phone, email, vehicle, message }) {
   const lines = [
-    "Hello Kaze Motors,",
+    "Hello Zayn Khan,",
     "I would like to enquire about a vehicle.",
     "",
     `Name: ${name}`,

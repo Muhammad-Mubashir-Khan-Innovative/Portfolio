@@ -1,4 +1,4 @@
-# Kaze Motors — Japanese Car Dealer Portfolio
+# Zayn Khan — Japanese Car Dealer Portfolio
 
 A premium, single-page portfolio website for a Japanese automotive dealer, built with React, Vite, Tailwind CSS, and Framer Motion.
 
