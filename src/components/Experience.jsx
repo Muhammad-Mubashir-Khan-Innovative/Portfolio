@@ -55,7 +55,7 @@ export default function Experience() {
                 whileHover={{ y: -6 }}
                 className="group relative flex flex-col gap-5 rounded-sm border border-white/10 bg-charcoal/60 p-8 transition-colors duration-300 hover:border-accent/40"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-sm border border-white/10 bg-white/5 text-accent-light transition-colors duration-300 group-hover:bg-accent group-hover:text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-sm border border-white/10 bg-white/5 text-accent-light transition-colors duration-300 group-hover:bg-accent group-hover:text-ink">
                   <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
                 </div>
                 <h3 className="text-lg font-bold text-offwhite">

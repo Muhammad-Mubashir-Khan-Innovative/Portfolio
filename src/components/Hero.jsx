@@ -53,7 +53,7 @@ export default function Hero() {
         <img
           src={HERO_IMAGE}
           alt="Illustration of a premium car under showroom spotlights with a reflective floor, representing Zayn Khan's Japanese car showroom"
-          className="h-full w-full object-cover object-[85%_75%] sm:object-center"
+          className="h-full w-full object-cover object-[72%_62%] sm:object-center"
           fetchPriority="high"
         />
       </div>
@@ -77,7 +77,7 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-        <motion.span variants={item} className="eyebrow">
+        <motion.span variants={item} className="eyebrow text-accent-light">
           <span className="h-px w-8 bg-accent-light" aria-hidden="true" />
           Japanese Automotive Excellence
         </motion.span>

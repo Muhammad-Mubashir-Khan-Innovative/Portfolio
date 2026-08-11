@@ -2,15 +2,8 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle2, Star } from "lucide-react";
 import SectionTitle from "./SectionTitle";
-import { MaleAvatar, FemaleAvatar, NeutralAvatar } from "./AvatarIcons";
 
-const initialForm = { name: "", email: "", gender: "", rating: 0, message: "" };
-
-function avatarForGender(gender) {
-  if (gender === "male") return MaleAvatar;
-  if (gender === "female") return FemaleAvatar;
-  return NeutralAvatar;
-}
+const initialForm = { name: "", email: "", rating: 0, message: "" };
 
 // Placeholder submit handler — replace with a real API call when a backend is available.
 async function submitFeedback(payload) {
@@ -32,7 +25,6 @@ function validate(form) {
     errors.email = "Please enter a valid email address.";
   }
 
-  if (!form.gender) errors.gender = "Please select your gender.";
   if (!form.rating) errors.rating = "Please select a rating.";
   if (!form.message.trim()) errors.message = "Please share your feedback.";
 
@@ -44,7 +36,6 @@ export default function Feedback() {
   const [errors, setErrors] = useState({});
   const [hoverRating, setHoverRating] = useState(0);
   const [status, setStatus] = useState("idle");
-  const [submittedGender, setSubmittedGender] = useState("");
 
   const handleChange = (field) => (e) => {
     setForm((f) => ({ ...f, [field]: e.target.value }));
@@ -66,7 +57,6 @@ export default function Feedback() {
     const result = await submitFeedback(form);
 
     if (result.ok) {
-      setSubmittedGender(form.gender);
       setStatus("success");
       setForm(initialForm);
       setTimeout(() => setStatus("idle"), 4500);
@@ -74,9 +64,6 @@ export default function Feedback() {
       setStatus("idle");
     }
   };
-
-  const PreviewAvatar = avatarForGender(form.gender);
-  const SuccessAvatar = avatarForGender(submittedGender);
 
   return (
     <section id="feedback" className="scroll-mt-20 bg-ink py-24 sm:py-32">
@@ -106,14 +93,9 @@ export default function Feedback() {
                 className="flex flex-col items-center gap-4 py-10 text-center"
                 role="status"
               >
-                <div className="relative">
-                  <span className="flex h-20 w-20 items-center justify-center rounded-full bg-accent/15 text-accent-light">
-                    <SuccessAvatar className="h-11 w-11" />
-                  </span>
-                  <span className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-white ring-4 ring-charcoal">
-                    <CheckCircle2 size={16} />
-                  </span>
-                </div>
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/15 text-accent-light">
+                  <CheckCircle2 size={32} />
+                </span>
                 <h3 className="text-xl font-bold text-offwhite">
                   Thank you for your feedback!
                 </h3>
@@ -133,48 +115,6 @@ export default function Feedback() {
                 noValidate
                 className="flex flex-col gap-6"
               >
-                <div className="flex flex-col items-center gap-4 rounded-sm border border-white/10 bg-ink/40 p-4 sm:flex-row sm:items-end">
-                  <div className="flex flex-col items-center gap-2">
-                    <span className="text-xs font-semibold uppercase tracking-wide text-mist">
-                      Avatar
-                    </span>
-                    <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-charcoal text-accent-light">
-                      <PreviewAvatar className="h-9 w-9" />
-                    </span>
-                  </div>
-
-                  <div className="flex w-full flex-col gap-2 sm:max-w-xs">
-                    <label
-                      htmlFor="feedback-gender"
-                      className="text-xs font-semibold uppercase tracking-wide text-mist"
-                    >
-                      Gender
-                    </label>
-                    <select
-                      id="feedback-gender"
-                      value={form.gender}
-                      onChange={handleChange("gender")}
-                      aria-invalid={Boolean(errors.gender)}
-                      aria-describedby={errors.gender ? "feedback-gender-error" : undefined}
-                      className={`rounded-sm border bg-ink/60 px-4 py-3 text-sm text-offwhite focus:outline-none focus:ring-2 focus:ring-accent-light/60 ${
-                        errors.gender ? "border-accent-light" : "border-white/15"
-                      }`}
-                    >
-                      <option value="" disabled>
-                        Select gender
-                      </option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="unspecified">Prefer not to say</option>
-                    </select>
-                    {errors.gender && (
-                      <p id="feedback-gender-error" className="text-xs text-accent-light">
-                        {errors.gender}
-                      </p>
-                    )}
-                  </div>
-                </div>
-
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div className="flex flex-col gap-2">
                     <label

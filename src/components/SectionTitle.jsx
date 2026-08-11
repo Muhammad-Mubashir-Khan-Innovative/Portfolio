@@ -28,8 +28,11 @@ export default function SectionTitle({
       variants={fadeUp}
     >
       {eyebrow ? (
-        <span className="eyebrow">
-          <span className="h-px w-8 bg-accent-light" aria-hidden="true" />
+        <span className={`eyebrow ${light ? "text-accent-light" : "text-accent-dark"}`}>
+          <span
+            className={`h-px w-8 ${light ? "bg-accent-light" : "bg-accent-dark"}`}
+            aria-hidden="true"
+          />
           {eyebrow}
         </span>
       ) : null}

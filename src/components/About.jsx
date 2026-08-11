@@ -25,7 +25,7 @@ export default function About() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <div
-            className="absolute -left-4 -top-4 h-24 w-24 border-l-2 border-t-2 border-accent sm:-left-6 sm:-top-6 sm:h-32 sm:w-32"
+            className="absolute -left-4 -top-4 h-24 w-24 border-l-2 border-t-2 border-accent-dark sm:-left-6 sm:-top-6 sm:h-32 sm:w-32"
             aria-hidden="true"
           />
           <div className="group relative overflow-hidden rounded-sm shadow-[0_30px_60px_-20px_rgba(10,10,10,0.3)]">
@@ -33,12 +33,12 @@ export default function About() {
               src={ABOUT_IMAGE}
               alt={`Portrait of ${dealer.name}, trusted Japanese car dealer`}
               loading="lazy"
-              className="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              className="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
           </div>
           <div
-            className="absolute -bottom-4 -right-4 h-24 w-24 border-b-2 border-r-2 border-accent sm:-bottom-6 sm:-right-6 sm:h-32 sm:w-32"
+            className="absolute -bottom-4 -right-4 h-24 w-24 border-b-2 border-r-2 border-accent-dark sm:-bottom-6 sm:-right-6 sm:h-32 sm:w-32"
             aria-hidden="true"
           />
           <motion.div
@@ -65,9 +65,9 @@ export default function About() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.4 }}
-            className="eyebrow text-accent"
+            className="eyebrow text-accent-dark"
           >
-            <span className="h-px w-8 bg-accent" aria-hidden="true" />
+            <span className="h-px w-8 bg-accent-dark" aria-hidden="true" />
             About Me
           </motion.span>
 
@@ -119,7 +119,7 @@ export default function About() {
             className="mt-2 flex items-center gap-3 border-t border-charcoal/10 pt-6"
           >
             <span
-              className="font-serif text-2xl italic text-accent"
+              className="font-serif text-2xl italic text-accent-dark"
               style={{ fontFamily: "var(--font-jp)" }}
             >
               — Your Trusted Car Partner
@@ -141,7 +141,7 @@ export default function About() {
                   .querySelector("#experience")
                   ?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
-              className="group inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:text-accent"
+              className="group inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:text-accent-dark"
             >
               My Journey
               <ArrowRight

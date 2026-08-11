@@ -16,6 +16,10 @@ export const dealer = {
   email: "info@zaynkhan.com",
   location: "Karachi, Pakistan",
 
+  // Separate from the dealer's own WhatsApp number above — this is where
+  // the footer's "Want to contact the developer?" messages are sent.
+  developerWhatsapp: "923333723075",
+
   stats: {
     experience: { value: 7, suffix: "+", label: "Years of Experience" },
     deals: { value: 1500, suffix: "+", label: "Deals Closed" },

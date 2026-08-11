@@ -142,13 +142,13 @@ export default function Contact() {
                   onChange={handleChange("name")}
                   aria-invalid={Boolean(errors.name)}
                   aria-describedby={errors.name ? "contact-name-error" : undefined}
-                  className={`rounded-sm border bg-white px-4 py-3 text-sm text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-accent/50 ${
-                    errors.name ? "border-accent" : "border-charcoal/15"
+                  className={`rounded-sm border bg-white px-4 py-3 text-sm text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-accent-dark/50 ${
+                    errors.name ? "border-accent-dark" : "border-charcoal/15"
                   }`}
                   placeholder="Your full name"
                 />
                 {errors.name && (
-                  <p id="contact-name-error" className="text-xs text-accent">
+                  <p id="contact-name-error" className="text-xs text-accent-dark">
                     {errors.name}
                   </p>
                 )}
@@ -165,13 +165,13 @@ export default function Contact() {
                   onChange={handleChange("phone")}
                   aria-invalid={Boolean(errors.phone)}
                   aria-describedby={errors.phone ? "contact-phone-error" : undefined}
-                  className={`rounded-sm border bg-white px-4 py-3 text-sm text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-accent/50 ${
-                    errors.phone ? "border-accent" : "border-charcoal/15"
+                  className={`rounded-sm border bg-white px-4 py-3 text-sm text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-accent-dark/50 ${
+                    errors.phone ? "border-accent-dark" : "border-charcoal/15"
                   }`}
                   placeholder="03XX XXXXXXX"
                 />
                 {errors.phone && (
-                  <p id="contact-phone-error" className="text-xs text-accent">
+                  <p id="contact-phone-error" className="text-xs text-accent-dark">
                     {errors.phone}
                   </p>
                 )}
@@ -190,13 +190,13 @@ export default function Contact() {
                   onChange={handleChange("email")}
                   aria-invalid={Boolean(errors.email)}
                   aria-describedby={errors.email ? "contact-email-error" : undefined}
-                  className={`rounded-sm border bg-white px-4 py-3 text-sm text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-accent/50 ${
-                    errors.email ? "border-accent" : "border-charcoal/15"
+                  className={`rounded-sm border bg-white px-4 py-3 text-sm text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-accent-dark/50 ${
+                    errors.email ? "border-accent-dark" : "border-charcoal/15"
                   }`}
                   placeholder="you@example.com"
                 />
                 {errors.email && (
-                  <p id="contact-email-error" className="text-xs text-accent">
+                  <p id="contact-email-error" className="text-xs text-accent-dark">
                     {errors.email}
                   </p>
                 )}
@@ -211,7 +211,7 @@ export default function Contact() {
                   type="text"
                   value={form.vehicle}
                   onChange={handleChange("vehicle")}
-                  className="rounded-sm border border-charcoal/15 bg-white px-4 py-3 text-sm text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                  className="rounded-sm border border-charcoal/15 bg-white px-4 py-3 text-sm text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-accent-dark/50"
                   placeholder="e.g. Toyota Land Cruiser"
                 />
               </div>
@@ -228,19 +228,19 @@ export default function Contact() {
                 onChange={handleChange("message")}
                 aria-invalid={Boolean(errors.message)}
                 aria-describedby={errors.message ? "contact-message-error" : undefined}
-                className={`resize-none rounded-sm border bg-white px-4 py-3 text-sm text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-accent/50 ${
-                  errors.message ? "border-accent" : "border-charcoal/15"
+                className={`resize-none rounded-sm border bg-white px-4 py-3 text-sm text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-accent-dark/50 ${
+                  errors.message ? "border-accent-dark" : "border-charcoal/15"
                 }`}
                 placeholder="I would like to know the price and availability."
               />
               {errors.message && (
-                <p id="contact-message-error" className="text-xs text-accent">
+                <p id="contact-message-error" className="text-xs text-accent-dark">
                   {errors.message}
                 </p>
               )}
             </div>
 
-            <button type="submit" className="btn-primary mt-2 bg-[#25D366] shadow-[0_8px_30px_-8px_rgba(37,211,102,0.6)] hover:bg-[#20bd5a] hover:shadow-[0_8px_40px_-6px_rgba(37,211,102,0.75)]">
+            <button type="submit" className="btn-primary mt-2 bg-[#25D366] text-white shadow-[0_8px_30px_-8px_rgba(37,211,102,0.6)] hover:bg-[#20bd5a] hover:text-white hover:shadow-[0_8px_40px_-6px_rgba(37,211,102,0.75)]">
               <MessageCircle size={18} aria-hidden="true" />
               Send Message on WhatsApp
             </button>

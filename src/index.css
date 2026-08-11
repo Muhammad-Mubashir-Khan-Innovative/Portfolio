@@ -4,16 +4,16 @@
   --font-sans: "Manrope", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
   --font-jp: "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #060911;
-  --color-charcoal: #101a2e;
-  --color-charcoal-light: #1a2740;
-  --color-steel: #55647a;
-  --color-mist: #a3aec2;
-  --color-offwhite: #f1f4f9;
-  --color-paper: #f8f9fc;
-  --color-accent: #b3282d;
-  --color-accent-light: #d13a3a;
-  --color-accent-dark: #7a1c1f;
+  --color-ink: #0d1b2a;
+  --color-charcoal: #1b263b;
+  --color-charcoal-light: #24344d;
+  --color-steel: #415a77;
+  --color-mist: #a9bbd1;
+  --color-offwhite: #f7f3e9;
+  --color-paper: #f7f3e9;
+  --color-accent: #d4af37;
+  --color-accent-light: #e3c567;
+  --color-accent-dark: #7a5c1a;
 
   --animate-pulse-slow: pulse-slow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
@@ -68,7 +68,7 @@
 
   ::selection {
     background-color: var(--color-accent);
-    color: var(--color-paper);
+    color: var(--color-ink);
   }
 
   :focus-visible {
@@ -82,7 +82,7 @@
     left: 1rem;
     z-index: 100;
     background-color: var(--color-accent);
-    color: white;
+    color: var(--color-ink);
     padding: 0.75rem 1.25rem;
     border-radius: 2px;
     font-weight: 600;
@@ -101,11 +101,11 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-accent-light;
+    @apply inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-accent px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white shadow-[0_8px_30px_-8px_rgba(179,40,45,0.6)] transition-all duration-300 hover:bg-accent-light hover:shadow-[0_8px_40px_-6px_rgba(179,40,45,0.75)] focus-visible:outline-offset-4 active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-accent px-8 py-4 text-sm font-semibold uppercase tracking-wider text-ink shadow-[0_8px_30px_-8px_rgba(212,175,55,0.55)] transition-all duration-300 hover:bg-accent-light hover:shadow-[0_8px_40px_-6px_rgba(212,175,55,0.7)] focus-visible:outline-offset-4 active:scale-[0.98];
   }
 
   .btn-secondary {
