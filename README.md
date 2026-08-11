@@ -43,7 +43,7 @@ public/
 
 ## Images
 
-The hero section uses bundled local SVG artwork (`public/images/hero.svg`, a car-showroom scene) so the site has zero external image dependencies out of the box. The About section uses `public/images/AboutMe.jpeg`. To swap in different imagery, drop files into `public/images/` and update the `HERO_IMAGE` / `ABOUT_IMAGE` constants in `src/components/Hero.jsx` and `src/components/About.jsx`.
+The hero section uses `public/images/hero.jpg` and the About section uses `public/images/AboutMe.jpeg`. To swap in different imagery, drop a file into `public/images/` and update the `HERO_IMAGE` / `ABOUT_IMAGE` constants in `src/components/Hero.jsx` and `src/components/About.jsx`.
 
 ## WhatsApp integration
 

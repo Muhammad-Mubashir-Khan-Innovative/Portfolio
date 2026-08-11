@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
-const HERO_IMAGE = "/images/hero.svg";
+const HERO_IMAGE = "/images/hero.jpg";
 
 const container = {
   hidden: {},
@@ -52,8 +52,8 @@ export default function Hero() {
       >
         <img
           src={HERO_IMAGE}
-          alt="Illustration of a premium car under showroom spotlights with a reflective floor, representing Zayn Khan's Japanese car showroom"
-          className="h-full w-full object-cover object-[72%_62%] sm:object-center"
+          alt="A Nissan Skyline GT-R parked on a rain-slicked waterfront at night, city skyline glowing in the background"
+          className="h-full w-full object-cover object-[78%_58%] sm:object-[70%_55%]"
           fetchPriority="high"
         />
       </div>
