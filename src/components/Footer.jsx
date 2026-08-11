@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { dealer } from "../data/dealer";
 import { FacebookIcon, InstagramIcon, YoutubeIcon, TiktokIcon } from "./SocialIcons";
 import { buildDeveloperMessage, buildWhatsAppUrl } from "../data/whatsapp";
@@ -85,33 +85,6 @@ export default function Footer() {
 
         <div className="flex flex-col gap-4">
           <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-mist">
-            Contact
-          </h3>
-          <ul className="flex flex-col gap-3 text-sm text-offwhite/85">
-            <li className="flex items-center gap-2">
-              <Phone size={15} className="text-accent-light" aria-hidden="true" />
-              <a href={dealer.phoneHref} className="transition-colors hover:text-accent-light">
-                {dealer.phone}
-              </a>
-            </li>
-            <li className="flex items-center gap-2">
-              <Mail size={15} className="text-accent-light" aria-hidden="true" />
-              <a
-                href={`mailto:${dealer.email}`}
-                className="transition-colors hover:text-accent-light"
-              >
-                {dealer.email}
-              </a>
-            </li>
-            <li className="flex items-center gap-2">
-              <MapPin size={15} className="text-accent-light" aria-hidden="true" />
-              <span>{dealer.location}</span>
-            </li>
-          </ul>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-mist">
             Follow Us
           </h3>
           <div className="flex gap-3">
@@ -129,81 +102,70 @@ export default function Footer() {
             ))}
           </div>
         </div>
-      </div>
 
-      <div className="border-t border-white/10">
-        <div className="section-container py-12 sm:py-16">
-          <div className="mx-auto max-w-2xl rounded-sm border border-white/10 bg-ink/40 p-6 sm:p-8">
-            <h3 className="text-lg font-bold text-offwhite">
-              Want to contact the developer?
-            </h3>
-            <p className="mt-1 text-sm text-mist">
-              Have feedback on the site itself, or want one like it? Send a
-              message straight to WhatsApp.
-            </p>
+        <div className="flex flex-col gap-3">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-mist">
+            Contact the Developer
+          </h3>
+          <p className="text-xs leading-relaxed text-mist">
+            Feedback on the site, or want one like it?
+          </p>
 
-            <form onSubmit={handleDevSubmit} noValidate className="mt-6 flex flex-col gap-4">
-              <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="dev-contact"
-                  className="text-xs font-semibold uppercase tracking-wide text-mist"
-                >
-                  Your Email or Phone
-                </label>
-                <input
-                  id="dev-contact"
-                  type="text"
-                  value={devForm.contact}
-                  onChange={handleDevChange("contact")}
-                  aria-invalid={Boolean(devErrors.contact)}
-                  aria-describedby={devErrors.contact ? "dev-contact-error" : undefined}
-                  className={`rounded-sm border bg-charcoal px-4 py-3 text-sm text-offwhite placeholder:text-steel focus:outline-none focus:ring-2 focus:ring-accent-light/60 ${
-                    devErrors.contact ? "border-accent-light" : "border-white/15"
-                  }`}
-                  placeholder="you@example.com or 03XX XXXXXXX"
-                />
-                {devErrors.contact && (
-                  <p id="dev-contact-error" className="text-xs text-accent-light">
-                    {devErrors.contact}
-                  </p>
-                )}
-              </div>
+          <form onSubmit={handleDevSubmit} noValidate className="flex flex-col gap-3">
+            <div className="flex flex-col gap-1">
+              <label htmlFor="dev-contact" className="sr-only">
+                Your Email or Phone
+              </label>
+              <input
+                id="dev-contact"
+                type="text"
+                value={devForm.contact}
+                onChange={handleDevChange("contact")}
+                aria-invalid={Boolean(devErrors.contact)}
+                aria-describedby={devErrors.contact ? "dev-contact-error" : undefined}
+                className={`rounded-sm border bg-ink/50 px-3 py-2 text-xs text-offwhite placeholder:text-steel focus:outline-none focus:ring-2 focus:ring-accent-light/60 ${
+                  devErrors.contact ? "border-accent-light" : "border-white/15"
+                }`}
+                placeholder="Email or phone"
+              />
+              {devErrors.contact && (
+                <p id="dev-contact-error" className="text-xs text-accent-light">
+                  {devErrors.contact}
+                </p>
+              )}
+            </div>
 
-              <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="dev-message"
-                  className="text-xs font-semibold uppercase tracking-wide text-mist"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="dev-message"
-                  rows={3}
-                  value={devForm.message}
-                  onChange={handleDevChange("message")}
-                  aria-invalid={Boolean(devErrors.message)}
-                  aria-describedby={devErrors.message ? "dev-message-error" : undefined}
-                  className={`resize-none rounded-sm border bg-charcoal px-4 py-3 text-sm text-offwhite placeholder:text-steel focus:outline-none focus:ring-2 focus:ring-accent-light/60 ${
-                    devErrors.message ? "border-accent-light" : "border-white/15"
-                  }`}
-                  placeholder="Tell me what's on your mind..."
-                />
-                {devErrors.message && (
-                  <p id="dev-message-error" className="text-xs text-accent-light">
-                    {devErrors.message}
-                  </p>
-                )}
-              </div>
+            <div className="flex flex-col gap-1">
+              <label htmlFor="dev-message" className="sr-only">
+                Message
+              </label>
+              <textarea
+                id="dev-message"
+                rows={2}
+                value={devForm.message}
+                onChange={handleDevChange("message")}
+                aria-invalid={Boolean(devErrors.message)}
+                aria-describedby={devErrors.message ? "dev-message-error" : undefined}
+                className={`resize-none rounded-sm border bg-ink/50 px-3 py-2 text-xs text-offwhite placeholder:text-steel focus:outline-none focus:ring-2 focus:ring-accent-light/60 ${
+                  devErrors.message ? "border-accent-light" : "border-white/15"
+                }`}
+                placeholder="Your message..."
+              />
+              {devErrors.message && (
+                <p id="dev-message-error" className="text-xs text-accent-light">
+                  {devErrors.message}
+                </p>
+              )}
+            </div>
 
-              <button
-                type="submit"
-                className="btn-primary mt-1 self-start bg-[#25D366] text-white shadow-[0_8px_30px_-8px_rgba(37,211,102,0.6)] hover:bg-[#20bd5a] hover:text-white hover:shadow-[0_8px_40px_-6px_rgba(37,211,102,0.75)]"
-              >
-                <MessageCircle size={18} aria-hidden="true" />
-                Send via WhatsApp
-              </button>
-            </form>
-          </div>
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center gap-1.5 rounded-sm bg-[#25D366] px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:bg-[#20bd5a] active:scale-[0.98]"
+            >
+              <MessageCircle size={14} aria-hidden="true" />
+              Send via WhatsApp
+            </button>
+          </form>
         </div>
       </div>
 
