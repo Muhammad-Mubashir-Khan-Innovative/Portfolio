@@ -43,8 +43,19 @@ public/
 
 ## Images
 
-The hero and about sections use bundled local SVG artwork (`public/images/hero.svg`, `public/images/about.svg`) so the site has zero external image dependencies out of the box. To swap in real photography, drop files into `public/images/` (e.g. `hero.jpg`, `dealer.jpg`) and update the `HERO_IMAGE` / `ABOUT_IMAGE` constants in `src/components/Hero.jsx` and `src/components/About.jsx`.
+The hero section uses bundled local SVG artwork (`public/images/hero.svg`, a car-showroom scene) so the site has zero external image dependencies out of the box. The About section uses `public/images/AboutMe.jpeg`. To swap in different imagery, drop files into `public/images/` and update the `HERO_IMAGE` / `ABOUT_IMAGE` constants in `src/components/Hero.jsx` and `src/components/About.jsx`.
 
 ## WhatsApp integration
 
 The contact form builds a pre-filled WhatsApp message and opens `https://wa.me/<number>` on submit. The number is set once in `src/data/dealer.js` (`whatsapp` field) and reused by the contact form and the floating WhatsApp button.
+
+## SEO
+
+The site ships with meta descriptions, Open Graph/Twitter cards, a JSON-LD `AutomotiveBusiness` schema, `robots.txt`, and `sitemap.xml`. Before launch, replace the placeholder domain (`https://zaynkhan.example.com`) with the real production URL in:
+
+- `src/data/dealer.js` (`siteUrl`)
+- `index.html` (canonical link, `og:url`, `og:image`, `twitter:image`, and the JSON-LD block)
+- `public/robots.txt` (`Sitemap:` line)
+- `public/sitemap.xml` (`<loc>`)
+
+The social preview image lives at `public/images/og-image.png` (1200×630) — regenerate it if the hero design changes.

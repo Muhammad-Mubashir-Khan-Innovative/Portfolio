@@ -4,13 +4,13 @@
   --font-sans: "Manrope", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
   --font-jp: "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #0a0a0a;
-  --color-charcoal: #171717;
-  --color-charcoal-light: #22201f;
-  --color-steel: #6b6864;
-  --color-mist: #a8a49e;
-  --color-offwhite: #f5f3ef;
-  --color-paper: #fbfaf8;
+  --color-ink: #060911;
+  --color-charcoal: #101a2e;
+  --color-charcoal-light: #1a2740;
+  --color-steel: #55647a;
+  --color-mist: #a3aec2;
+  --color-offwhite: #f1f4f9;
+  --color-paper: #f8f9fc;
   --color-accent: #b3282d;
   --color-accent-light: #d13a3a;
   --color-accent-dark: #7a1c1f;
@@ -74,6 +74,24 @@
   :focus-visible {
     outline: 2px solid var(--color-accent-light);
     outline-offset: 3px;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 100;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
   }
 }
 

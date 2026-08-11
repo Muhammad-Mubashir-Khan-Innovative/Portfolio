@@ -6,6 +6,10 @@ export const dealer = {
   tagline: "Japanese Automotive Excellence",
   taglineJp: "風",
 
+  // Update to the real production domain before launch — used for
+  // canonical/OG tags and public/sitemap.xml.
+  siteUrl: "https://zaynkhan.example.com",
+
   phone: "0333 3723075",
   phoneHref: "tel:+923333723075",
   whatsapp: "923333723075",

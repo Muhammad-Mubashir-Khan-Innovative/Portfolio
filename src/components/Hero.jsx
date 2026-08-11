@@ -52,8 +52,8 @@ export default function Hero() {
       >
         <img
           src={HERO_IMAGE}
-          alt="A premium Japanese vehicle in dramatic low light, showcasing precision engineering and design"
-          className="h-full w-full object-cover"
+          alt="Illustration of a premium car under showroom spotlights with a reflective floor, representing Zayn Khan's Japanese car showroom"
+          className="h-full w-full object-cover object-[85%_75%] sm:object-center"
           fetchPriority="high"
         />
       </div>
