@@ -34,20 +34,32 @@ Update the values there to rebrand the site without touching any component code.
 ```
 src/
   components/   Reusable section components (Navbar, Hero, About, Stats, ...)
-  data/         dealer.js (config) and whatsapp.js (WhatsApp link helpers)
+  data/         dealer.js (config), whatsapp.js (WhatsApp link helper), forms.js (form submission endpoint)
   App.jsx       Assembles all sections
   main.jsx      App entry point
 public/
-  images/       Local SVG artwork used by the Hero and About sections
+  images/       Hero and About imagery
 ```
 
 ## Images
 
 The hero section uses `public/images/hero.jpg` and the About section uses `public/images/AboutMe.jpeg`. To swap in different imagery, drop a file into `public/images/` and update the `HERO_IMAGE` / `ABOUT_IMAGE` constants in `src/components/Hero.jsx` and `src/components/About.jsx`.
 
+## Form submissions
+
+The Contact, Feedback, and footer "Contact the Developer" forms all POST to the same Google Apps Script Web App endpoint, configured once in `src/data/forms.js` (`FORM_ENDPOINT`). Each form sends a `formType` field so the script can tell them apart:
+
+| Form | Payload |
+| --- | --- |
+| Contact | `{ name, email, phone, message }` |
+| Feedback | `{ formType: "feedback", name, email, rating, message }` |
+| Contact the Developer | `{ formType: "developer", contact, message }` |
+
+Requests are sent with `Content-Type: text/plain` rather than `application/json` — Apps Script web apps don't respond to CORS preflight requests, so a JSON content-type gets blocked by the browser before it reaches the script. The script's `doPost` can still call `JSON.parse(e.postData.contents)` regardless of this header.
+
 ## WhatsApp integration
 
-The contact form builds a pre-filled WhatsApp message and opens `https://wa.me/<number>` on submit. The number is set once in `src/data/dealer.js` (`whatsapp` field) and reused by the contact form and the floating WhatsApp button.
+The floating WhatsApp button opens `https://wa.me/<number>` with a pre-filled message. The number is set once in `src/data/dealer.js` (`whatsapp` field).
 
 ## SEO
 

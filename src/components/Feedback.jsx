@@ -1,19 +1,10 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CheckCircle2, Star } from "lucide-react";
+import { AlertCircle, CheckCircle2, Star } from "lucide-react";
 import SectionTitle from "./SectionTitle";
+import { submitFormData } from "../data/forms";
 
 const initialForm = { name: "", email: "", rating: 0, message: "" };
-
-// Placeholder submit handler — replace with a real API call when a backend is available.
-async function submitFeedback(payload) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.info("Feedback submitted (placeholder):", payload);
-      resolve({ ok: true });
-    }, 600);
-  });
-}
 
 function validate(form) {
   const errors = {};
@@ -54,14 +45,13 @@ export default function Feedback() {
     if (Object.keys(validationErrors).length > 0) return;
 
     setStatus("submitting");
-    const result = await submitFeedback(form);
-
-    if (result.ok) {
+    try {
+      await submitFormData({ formType: "feedback", ...form });
       setStatus("success");
       setForm(initialForm);
       setTimeout(() => setStatus("idle"), 4500);
-    } else {
-      setStatus("idle");
+    } catch {
+      setStatus("error");
     }
   };
 
@@ -222,6 +212,13 @@ export default function Feedback() {
                     </p>
                   )}
                 </div>
+
+                {status === "error" && (
+                  <p className="flex items-center gap-2 text-sm text-accent-light" role="alert">
+                    <AlertCircle size={16} aria-hidden="true" />
+                    Something went wrong sending your feedback. Please try again.
+                  </p>
+                )}
 
                 <button
                   type="submit"

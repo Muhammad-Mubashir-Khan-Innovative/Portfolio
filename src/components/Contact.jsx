@@ -4,7 +4,7 @@ import { AlertCircle, CheckCircle2, Mail, MapPin, MessageCircle, Send } from "lu
 import SectionTitle from "./SectionTitle";
 import { dealer } from "../data/dealer";
 import { buildWhatsAppUrl } from "../data/whatsapp";
-import { submitContactForm } from "../data/contactForm";
+import { submitFormData } from "../data/forms";
 import { FacebookIcon, InstagramIcon } from "./SocialIcons";
 
 const initialForm = {
@@ -56,7 +56,7 @@ export default function Contact() {
 
     setStatus("submitting");
     try {
-      await submitContactForm(form);
+      await submitFormData(form);
       setStatus("success");
       setForm(initialForm);
       setTimeout(() => setStatus("idle"), 5000);
