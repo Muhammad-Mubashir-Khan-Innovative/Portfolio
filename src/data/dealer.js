@@ -31,6 +31,7 @@ export const dealer = {
 
   nav: [
     { label: "Home", href: "#home" },
+    { label: "Cars", href: "#cars" },
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
     { label: "Stories", href: "#stories" },

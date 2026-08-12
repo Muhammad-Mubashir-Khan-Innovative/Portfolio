@@ -33,17 +33,21 @@ Update the values there to rebrand the site without touching any component code.
 
 ```
 src/
-  components/   Reusable section components (Navbar, Hero, About, Stats, ...)
-  data/         dealer.js (config), whatsapp.js (WhatsApp link helper), forms.js (form submission endpoint)
+  components/   Reusable section components (Navbar, Hero, Vehicles, About, ...)
+  data/         dealer.js (config), vehicles.js (inventory), whatsapp.js (WhatsApp link helper), forms.js (form submission endpoint)
   App.jsx       Assembles all sections
   main.jsx      App entry point
 public/
-  images/       Hero and About imagery
+  images/       Hero, About, and vehicle imagery (vehicle photos live in images/cars/)
 ```
 
 ## Images
 
 The hero section uses `public/images/hero.jpg` and the About section uses `public/images/AboutMe.jpeg`. To swap in different imagery, drop a file into `public/images/` and update the `HERO_IMAGE` / `ABOUT_IMAGE` constants in `src/components/Hero.jsx` and `src/components/About.jsx`.
+
+## Featured Vehicles
+
+The "Featured Vehicles" section (right after the Hero) renders a card per entry in `src/data/vehicles.js` — add, remove, or edit cars there without touching any component code. Each entry needs a photo in `public/images/cars/`; resize new photos so the longer edge is ~1400px and compress to JPEG (quality ~80) to keep page weight down before adding them. Leave `price` as `null` to show "Contact for Price," or set it to a number/string to display a real price. Each card's WhatsApp button pre-fills an inquiry naming that specific vehicle.
 
 ## Form submissions
 
