@@ -82,7 +82,7 @@ export default function Contact() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col gap-8 lg:col-span-2"
           >
-            <div className="rounded-sm border border-charcoal/10 bg-ink p-8 text-offwhite">
+            <div className="flex flex-1 flex-col rounded-sm border border-charcoal/10 bg-ink p-8 text-offwhite">
               <h3 className="text-xl font-extrabold tracking-wide">
                 {dealer.name.toUpperCase()}
               </h3>

@@ -10,9 +10,9 @@ export const dealer = {
   // canonical/OG tags and public/sitemap.xml.
   siteUrl: "https://zaynkhan.example.com",
 
-  phone: "0333 3723075",
-  phoneHref: "tel:+923333723075",
-  whatsapp: "923333723075",
+  phone: "0307 0456622",
+  phoneHref: "tel:+923070456622",
+  whatsapp: "923070456622",
   email: "info@zaynkhan.com",
   location: "Karachi, Pakistan",
 
