@@ -37,16 +37,16 @@ export default function Stats() {
   const stats = Object.values(dealer.stats);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-charcoal via-ink to-ink py-20 sm:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-paper to-paper py-20 sm:py-24">
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-dark/40 to-transparent"
         aria-hidden="true"
       />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage:
-            "linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)",
+            "linear-gradient(#0d1b2a 1px, transparent 1px), linear-gradient(90deg, #0d1b2a 1px, transparent 1px)",
           backgroundSize: "56px 56px",
         }}
         aria-hidden="true"
@@ -60,7 +60,7 @@ export default function Stats() {
         aria-hidden="true"
       />
 
-      <div className="section-container relative grid grid-cols-1 gap-10 divide-y divide-white/10 sm:grid-cols-3 sm:gap-6 sm:divide-x sm:divide-y-0">
+      <div className="section-container relative grid grid-cols-1 gap-10 divide-y divide-charcoal/10 sm:grid-cols-3 sm:gap-6 sm:divide-x sm:divide-y-0">
         {stats.map((stat, i) => (
           <motion.div
             key={stat.label}
@@ -70,11 +70,11 @@ export default function Stats() {
             transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col items-center gap-3 pt-8 text-center first:pt-0 sm:pt-0"
           >
-            <span className="text-5xl font-extrabold text-offwhite drop-shadow-[0_2px_20px_rgba(212,175,55,0.15)] sm:text-6xl">
+            <span className="text-5xl font-extrabold text-ink drop-shadow-[0_2px_20px_rgba(212,175,55,0.1)] sm:text-6xl">
               <Counter value={stat.value} suffix={stat.suffix} />
             </span>
-            <span className="h-px w-10 bg-accent/40" aria-hidden="true" />
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-mist sm:text-sm">
+            <span className="h-px w-10 bg-accent-dark/40" aria-hidden="true" />
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-steel sm:text-sm">
               {stat.label}
             </span>
           </motion.div>

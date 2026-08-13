@@ -1,7 +1,8 @@
 // Featured inventory shown in the Vehicles section.
 // Add, remove, or edit cars here — each one renders as a card automatically.
 // Set `price` to a number/string to show it, or leave it null to show
-// "Contact for Price".
+// "Contact for Price". `images` can hold multiple photos per car — the
+// card cycles through them; the first one is used as the cover.
 export const vehicles = [
   {
     id: "ford-raptor-2026",
@@ -15,7 +16,12 @@ export const vehicles = [
     transmission: "Automatic",
     fuel: "Petrol",
     price: null,
-    image: "/images/cars/car-1.jpg",
+    images: [
+      "/images/cars/car-1-1.jpg",
+      "/images/cars/car-1-2.jpg",
+      "/images/cars/car-1-3.jpg",
+      "/images/cars/car-1-4.jpg",
+    ],
     badge: "Brand New",
   },
   {
@@ -29,7 +35,12 @@ export const vehicles = [
     transmission: "Automatic",
     fuel: "Diesel",
     price: null,
-    image: "/images/cars/car-2.jpg",
+    images: [
+      "/images/cars/car-2-1.jpg",
+      "/images/cars/car-2-2.jpg",
+      "/images/cars/car-2-3.jpg",
+      "/images/cars/car-2-4.jpg",
+    ],
   },
   {
     id: "toyota-hiace-2002",
@@ -42,7 +53,12 @@ export const vehicles = [
     transmission: "Automatic",
     fuel: "Petrol",
     price: null,
-    image: "/images/cars/car-3.jpg",
+    images: [
+      "/images/cars/car-3-1.jpg",
+      "/images/cars/car-3-2.jpg",
+      "/images/cars/car-3-3.jpg",
+      "/images/cars/car-3-4.jpg",
+    ],
   },
   {
     id: "toyota-coaster-2008",
@@ -55,7 +71,12 @@ export const vehicles = [
     transmission: "Automatic",
     fuel: "Diesel",
     price: null,
-    image: "/images/cars/car-4.jpg",
+    images: [
+      "/images/cars/car-4-1.jpg",
+      "/images/cars/car-4-2.jpg",
+      "/images/cars/car-4-3.jpg",
+      "/images/cars/car-4-4.jpg",
+    ],
   },
   {
     id: "lexus-nx300-2019",
@@ -68,7 +89,12 @@ export const vehicles = [
     transmission: "Automatic",
     fuel: "Petrol",
     price: null,
-    image: "/images/cars/car-5.jpg",
+    images: [
+      "/images/cars/car-5-1.jpg",
+      "/images/cars/car-5-2.jpg",
+      "/images/cars/car-5-3.jpg",
+      "/images/cars/car-5-4.jpg",
+    ],
   },
   {
     id: "mercedes-gla250-2015",
@@ -81,7 +107,12 @@ export const vehicles = [
     transmission: "Automatic",
     fuel: "Petrol",
     price: null,
-    image: "/images/cars/car-6.jpg",
+    images: [
+      "/images/cars/car-6-1.jpg",
+      "/images/cars/car-6-2.jpg",
+      "/images/cars/car-6-3.jpg",
+      "/images/cars/car-6-4.jpg",
+    ],
   },
 ];
 

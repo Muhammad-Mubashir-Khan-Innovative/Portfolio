@@ -47,7 +47,7 @@ The hero section uses `public/images/hero.jpg` and the About section uses `publi
 
 ## Featured Vehicles
 
-The "Featured Vehicles" section (after About) renders a swipeable carousel — one card per entry in `src/data/vehicles.js` — add, remove, or edit cars there without touching any component code. Each entry needs a photo in `public/images/cars/`; resize new photos so the longer edge is ~1400px and compress to JPEG (quality ~80) to keep page weight down before adding them. Leave `price` as `null` to show "Contact for Price," or set it to a number/string to display a real price. Each card's WhatsApp button pre-fills an inquiry naming that specific vehicle.
+The "Featured Vehicles" section (after About) renders a swipeable carousel — one card per entry in `src/data/vehicles.js` — add, remove, or edit cars there without touching any component code. Each entry's `images` array can hold multiple photos in `public/images/cars/`; the card cycles through them with its own arrows/dots (hover or tap). Resize new photos so the longer edge is ~1400px and compress to JPEG (quality ~80) to keep page weight down before adding them. Leave `price` as `null` to show "Contact for Price," or set it to a number/string to display a real price. Each card's WhatsApp button pre-fills an inquiry naming that specific vehicle.
 
 The carousel shows 1/2/3 cards at a time depending on viewport, autoplays every 5s (pausing on hover and respecting reduced-motion), and supports arrow buttons, dot navigation, and drag/swipe.
 

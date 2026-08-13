@@ -55,34 +55,12 @@ export default function Vehicles() {
   return (
     <section id="cars" className="scroll-mt-20 bg-ink py-24 sm:py-32">
       <div className="section-container">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <SectionTitle
-            eyebrow="Our Inventory"
-            title="Featured Vehicles"
-            subtitle="A curated selection of our current inventory — carefully inspected and ready for their next owner."
-            light
-          />
-          {maxIndex > 0 && (
-            <div className="mb-2 hidden shrink-0 items-center gap-3 sm:flex">
-              <button
-                type="button"
-                onClick={() => go(-1)}
-                aria-label="Previous vehicle"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-offwhite transition-colors duration-300 hover:border-accent-light hover:text-accent-light"
-              >
-                <ChevronLeft size={20} aria-hidden="true" />
-              </button>
-              <button
-                type="button"
-                onClick={() => go(1)}
-                aria-label="Next vehicle"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-offwhite transition-colors duration-300 hover:border-accent-light hover:text-accent-light"
-              >
-                <ChevronRight size={20} aria-hidden="true" />
-              </button>
-            </div>
-          )}
-        </div>
+        <SectionTitle
+          eyebrow="Our Inventory"
+          title="Featured Vehicles"
+          subtitle="A curated selection of our current inventory — carefully inspected and ready for their next owner."
+          light
+        />
 
         <div
           className="relative mt-10 -mx-3 overflow-hidden"
@@ -115,6 +93,27 @@ export default function Vehicles() {
 
           <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-ink to-transparent sm:w-16" aria-hidden="true" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-ink to-transparent sm:w-16" aria-hidden="true" />
+
+          {maxIndex > 0 && (
+            <>
+              <button
+                type="button"
+                onClick={() => go(-1)}
+                aria-label="Previous vehicle"
+                className="absolute left-4 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-ink/70 text-offwhite backdrop-blur-md transition-colors duration-300 hover:border-accent-light hover:text-accent-light sm:flex"
+              >
+                <ChevronLeft size={20} aria-hidden="true" />
+              </button>
+              <button
+                type="button"
+                onClick={() => go(1)}
+                aria-label="Next vehicle"
+                className="absolute right-4 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-ink/70 text-offwhite backdrop-blur-md transition-colors duration-300 hover:border-accent-light hover:text-accent-light sm:flex"
+              >
+                <ChevronRight size={20} aria-hidden="true" />
+              </button>
+            </>
+          )}
         </div>
 
         {maxIndex > 0 && (

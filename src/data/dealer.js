@@ -13,7 +13,7 @@ export const dealer = {
   phone: "0307 0456622",
   phoneHref: "tel:+923070456622",
   whatsapp: "923070456622",
-  email: "info@zaynkhan.com",
+  email: "zaynkhanjp@gmail.com",
   location: "Karachi, Pakistan",
 
   stats: {
