@@ -37,7 +37,11 @@ export default function Stats() {
   const stats = Object.values(dealer.stats);
 
   return (
-    <section className="relative overflow-hidden bg-ink py-20 sm:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-charcoal via-ink to-ink py-20 sm:py-24">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"
+        aria-hidden="true"
+      />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.05]"
         style={{
@@ -48,7 +52,11 @@ export default function Stats() {
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-[120px]"
+        className="pointer-events-none absolute -left-24 top-1/2 h-[380px] w-[380px] -translate-y-1/2 rounded-full bg-accent/15 blur-[130px]"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -right-24 top-1/2 h-[380px] w-[380px] -translate-y-1/2 rounded-full bg-steel/20 blur-[130px]"
         aria-hidden="true"
       />
 
@@ -60,11 +68,12 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col items-center gap-2 pt-8 text-center first:pt-0 sm:pt-0"
+            className="flex flex-col items-center gap-3 pt-8 text-center first:pt-0 sm:pt-0"
           >
-            <span className="text-5xl font-extrabold text-offwhite sm:text-6xl">
+            <span className="text-5xl font-extrabold text-offwhite drop-shadow-[0_2px_20px_rgba(212,175,55,0.15)] sm:text-6xl">
               <Counter value={stat.value} suffix={stat.suffix} />
             </span>
+            <span className="h-px w-10 bg-accent/40" aria-hidden="true" />
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-mist sm:text-sm">
               {stat.label}
             </span>

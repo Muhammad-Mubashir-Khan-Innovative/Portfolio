@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { AlertCircle, CheckCircle2, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+import { AlertCircle, CheckCircle2, Mail, MapPin, Send } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import { dealer } from "../data/dealer";
 import { buildWhatsAppUrl } from "../data/whatsapp";
 import { submitFormData } from "../data/forms";
 import { FacebookIcon, InstagramIcon } from "./SocialIcons";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const initialForm = {
   name: "",
@@ -27,7 +28,7 @@ function validate(form) {
 
 const contactDetails = [
   {
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     label: "WhatsApp",
     value: dealer.phone,
     href: buildWhatsAppUrl("Hello Zayn Khan, I would like to enquire about a vehicle."),

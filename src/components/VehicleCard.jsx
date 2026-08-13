@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Cog, Fuel, Gauge, MessageCircle, Settings2 } from "lucide-react";
+import { Cog, Fuel, Gauge, Settings2 } from "lucide-react";
 import {
   vehicleInquiryMessage,
   vehicleMileageLabel,
@@ -7,6 +7,7 @@ import {
   vehicleTitle,
 } from "../data/vehicles";
 import { buildWhatsAppUrl } from "../data/whatsapp";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function VehicleCard({ vehicle, index }) {
   const specs = [
@@ -63,7 +64,7 @@ export default function VehicleCard({ vehicle, index }) {
           rel="noopener noreferrer"
           className="mt-auto inline-flex items-center justify-center gap-2 rounded-sm border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold uppercase tracking-wide text-offwhite transition-all duration-300 hover:border-accent-light hover:text-accent-light"
         >
-          <MessageCircle size={16} aria-hidden="true" />
+          <WhatsAppIcon className="h-4 w-4" aria-hidden="true" />
           Enquire on WhatsApp
         </a>
       </div>

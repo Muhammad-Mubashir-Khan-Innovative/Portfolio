@@ -47,7 +47,9 @@ The hero section uses `public/images/hero.jpg` and the About section uses `publi
 
 ## Featured Vehicles
 
-The "Featured Vehicles" section (right after the Hero) renders a card per entry in `src/data/vehicles.js` — add, remove, or edit cars there without touching any component code. Each entry needs a photo in `public/images/cars/`; resize new photos so the longer edge is ~1400px and compress to JPEG (quality ~80) to keep page weight down before adding them. Leave `price` as `null` to show "Contact for Price," or set it to a number/string to display a real price. Each card's WhatsApp button pre-fills an inquiry naming that specific vehicle.
+The "Featured Vehicles" section (after About) renders a swipeable carousel — one card per entry in `src/data/vehicles.js` — add, remove, or edit cars there without touching any component code. Each entry needs a photo in `public/images/cars/`; resize new photos so the longer edge is ~1400px and compress to JPEG (quality ~80) to keep page weight down before adding them. Leave `price` as `null` to show "Contact for Price," or set it to a number/string to display a real price. Each card's WhatsApp button pre-fills an inquiry naming that specific vehicle.
+
+The carousel shows 1/2/3 cards at a time depending on viewport, autoplays every 5s (pausing on hover and respecting reduced-motion), and supports arrow buttons, dot navigation, and drag/swipe.
 
 ## Form submissions
 
@@ -63,7 +65,7 @@ Requests are sent with `Content-Type: text/plain` rather than `application/json`
 
 ## WhatsApp integration
 
-The floating WhatsApp button opens `https://wa.me/<number>` with a pre-filled message. The number is set once in `src/data/dealer.js` (`whatsapp` field).
+The floating WhatsApp button, the Contact section's info panel, and each vehicle card's enquiry button all open `https://wa.me/<number>` with a pre-filled message, using the official WhatsApp glyph (`src/components/WhatsAppIcon.jsx`). The number is set once in `src/data/dealer.js` (`whatsapp` field).
 
 ## SEO
 

@@ -1,5 +1,5 @@
-import { MessageCircle } from "lucide-react";
 import { buildWhatsAppUrl } from "../data/whatsapp";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const DEFAULT_MESSAGE =
   "Hello Zayn Khan, I would like to enquire about a vehicle.";
@@ -18,7 +18,7 @@ export default function WhatsAppButton() {
       </span>
       <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_30px_-8px_rgba(37,211,102,0.7)] transition-transform duration-300 group-hover:scale-105">
         <span className="absolute inset-0 -z-10 animate-pulse-slow rounded-full bg-[#25D366]/50" aria-hidden="true" />
-        <MessageCircle size={26} fill="currentColor" strokeWidth={0} aria-hidden="true" />
+        <WhatsAppIcon className="h-7 w-7" aria-hidden="true" />
       </span>
     </a>
   );
