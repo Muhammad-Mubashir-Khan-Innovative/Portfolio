@@ -43,7 +43,7 @@ public/
 
 ## Images
 
-The hero section uses `public/images/hero.jpg` and the About section uses `public/images/AboutMe.jpeg`. To swap in different imagery, drop a file into `public/images/` and update the `HERO_IMAGE` / `ABOUT_IMAGE` constants in `src/components/Hero.jsx` and `src/components/About.jsx`.
+The hero section plays a looping background video (`public/images/hero-bg.webm` / `.mp4`, with `hero-bg-poster.jpg` as the poster and `hero.jpg` as the `<video>` fallback for unsupported browsers), and the About section uses `public/images/AboutMe.jpeg`. To swap in different imagery, drop a file into `public/images/` and update the constants at the top of `src/components/Hero.jsx` / `src/components/About.jsx`.
 
 ## Featured Vehicles
 

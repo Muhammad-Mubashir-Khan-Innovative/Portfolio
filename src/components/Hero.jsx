@@ -3,6 +3,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const HERO_IMAGE = "/images/hero.jpg";
+const HERO_VIDEO_WEBM = "/images/hero-bg.webm";
+const HERO_VIDEO_MP4 = "/images/hero-bg.mp4";
+const HERO_VIDEO_POSTER = "/images/hero-bg-poster.jpg";
 
 const container = {
   hidden: {},
@@ -50,12 +53,25 @@ export default function Hero() {
         className="absolute inset-0 h-[130%] w-full will-change-transform"
         style={{ transform: `translateY(${offset}px)` }}
       >
-        <img
-          src={HERO_IMAGE}
-          alt="A Nissan Skyline GT-R parked on a rain-slicked waterfront at night, city skyline glowing in the background"
-          className="h-full w-full object-cover object-[78%_58%] sm:object-[70%_55%]"
+        <video
+          className="h-full w-full object-cover object-center"
+          poster={HERO_VIDEO_POSTER}
+          autoPlay={!prefersReducedMotion}
+          muted
+          loop
+          playsInline
+          preload="auto"
           fetchPriority="high"
-        />
+          aria-hidden="true"
+        >
+          <source src={HERO_VIDEO_WEBM} type="video/webm" />
+          <source src={HERO_VIDEO_MP4} type="video/mp4" />
+          <img
+            src={HERO_IMAGE}
+            alt="A Nissan Skyline GT-R parked on a rain-slicked waterfront at night, city skyline glowing in the background"
+            className="h-full w-full object-cover object-[78%_58%] sm:object-[70%_55%]"
+          />
+        </video>
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/60 to-ink" />
