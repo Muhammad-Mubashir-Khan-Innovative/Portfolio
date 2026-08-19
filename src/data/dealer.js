@@ -10,9 +10,9 @@ export const dealer = {
   // canonical/OG tags and public/sitemap.xml.
   siteUrl: "https://zaynkhan.example.com",
 
-  phone: "0307 0456622",
-  phoneHref: "tel:+923070456622",
-  whatsapp: "923070456622",
+  phone: "0336 2466009",
+  phoneHref: "tel:+923362466009",
+  whatsapp: "923362466009",
   email: "zaynkhanjp@gmail.com",
   location: "Karachi, Pakistan",
 
@@ -23,8 +23,8 @@ export const dealer = {
   },
 
   social: {
-    facebook: "#",
-    instagram: "#",
+    facebook: "https://www.facebook.com/share/1DAdage4Dx/",
+    instagram: "https://www.instagram.com/zaynkhanjp?igsh=ZHc5bzllOWl5eThn&igsi=ZHc5bzllOWl5eThn",
     youtube: "#",
     tiktok: "#",
   },

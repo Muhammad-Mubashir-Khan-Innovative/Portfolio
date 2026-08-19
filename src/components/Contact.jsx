@@ -33,8 +33,8 @@ const contactDetails = [
     value: dealer.phone,
     href: buildWhatsAppUrl("Hello Zayn Khan, I would like to enquire about a vehicle."),
   },
-  { icon: FacebookIcon, label: "Facebook", value: "@zaynkhan", href: dealer.social.facebook },
-  { icon: InstagramIcon, label: "Instagram", value: "@zaynkhan", href: dealer.social.instagram },
+  { icon: FacebookIcon, label: "Facebook", value: "Zayn Khan", href: dealer.social.facebook },
+  { icon: InstagramIcon, label: "Instagram", value: "@zaynkhanjp", href: dealer.social.instagram },
   { icon: Mail, label: "Email", value: dealer.email, href: `mailto:${dealer.email}` },
   { icon: MapPin, label: "Location", value: dealer.location, href: null },
 ];

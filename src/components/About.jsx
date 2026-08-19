@@ -91,9 +91,13 @@ export default function About() {
             viewport={{ once: true, amount: 0.4 }}
             className="text-base leading-relaxed text-steel sm:text-lg"
           >
-            With over {dealer.stats.experience.value} years of experience in
-            the Japanese automotive industry, I have built my reputation on
-            one simple principle — putting the customer first.
+            Hello and welcome! This is Zayn Khan, and I have over{" "}
+            {dealer.stats.experience.value} years of experience in the
+            international vehicle export business. I specialize in Japanese
+            auction vehicles and also deal in Thailand and Singapore
+            vehicles. We deal in a wide range of vehicles, including sedans,
+            SUVs, hatchbacks, pickups, hybrids, and commercial vehicles,
+            according to your budget and preferences.
           </motion.p>
 
           <motion.p
@@ -104,14 +108,28 @@ export default function About() {
             viewport={{ once: true, amount: 0.4 }}
             className="text-base leading-relaxed text-steel sm:text-lg"
           >
-            From sourcing carefully selected Japanese vehicles to helping
-            customers find the right car for their needs, every transaction
-            is handled with transparency, attention to detail, and personal
-            care.
+            I am committed to providing quality vehicles, competitive prices,
+            reliable inspections, and smooth export services. Customer
+            satisfaction, honesty, and professional service are my top
+            priorities.
+          </motion.p>
+
+          <motion.p
+            custom={0.4}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+            className="text-base leading-relaxed text-steel sm:text-lg"
+          >
+            If you are looking for any vehicle, please let me know your
+            requirements, preferred model, year, and budget. I'll be happy to
+            find the best option for you and provide a competitive
+            quotation. Thank you!
           </motion.p>
 
           <motion.div
-            custom={0.4}
+            custom={0.5}
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -127,7 +145,7 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            custom={0.5}
+            custom={0.6}
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
